@@ -123,13 +123,13 @@ st.set_page_config(layout="wide")
 st.write("## This Web App shows data related to the prices of airbnb listings in 6 european cities")
 st.write("###### Created by Antonios Raptakis")
 
-st.write("The csv files has been taken by kaggle and the geojson files by Inside Airbnb. The Room type indicates the kind of hosting with 2 options available, Entire home vs Private room.")
+st.write("The csv files were taken from kaggle and the geojson files from Inside Airbnb. The room type indicates the type of hosting with 2 options available, Entire Home vs Private Room.")
 
 cities = data.City.unique()
-st.markdown("##### At the dropdown below you can select the city and see the results.")
+st.markdown("##### Use the drop down below to select a city and see the results.")
 specify_the_city = st.selectbox("Select the city", cities,0)
 
-explain_boxplot = '<p style="text-align: left; font-size: 20px;">For the boxplots below, I have applied the LocalOutlierFactor from the neighbours of scikit-learn, in order to drop off the outliers. However, for the calculation of the mean of prices per room type and neighbourhood, and the overall mean, all of the values have been counted in.</p>'
+explain_boxplot = '<p style="text-align: left; font-size: 20px;">For the boxplots below, I have applied the LocalOutlierFactor from the neighbours of scikit-learn to remove the outliers. However, for the calculation of the mean of the prices per room type and neighbourhood and the overall mean, all values were included.</p>'
 st.write(explain_boxplot, unsafe_allow_html=True)
 
 
@@ -175,7 +175,7 @@ st.plotly_chart(fig, use_container_width=True)
 # ------------------------------------------------------------------------------------------------------------------------ #
 ############################################################################################################################
 
-explain_the_maps = '<p style="text-align: center; font-size: 18px;">The maps below show the airbnb options with different colors on the left and the overall mean per neighbourhood on the right side, and have been created using folium. You can zoom in and out by using the +/- on top left of the map.</p>'
+explain_the_maps = '<p style="text-align: center; font-size: 18px;">The maps below show Airbnb listings in different colours on the left, and the overall average per neighbourhood on the right, created using folium. You can zoom in and out using the +/- button at the top left of the map.</p>'
 st.write(explain_the_maps, unsafe_allow_html=True)
 
 
@@ -236,7 +236,7 @@ with col5:
 # ------------------------------------------------------------------------------------------------------------------------ #
 ############################################################################################################################
 
-explain_the_maps = '<p style="text-align: center; font-size: 18px;">The maps below show the mean prices per neighbourhood for the different room type options, Entire home on the left on the left vs Private room on the right side. In case of a neighbourhood with dark grey color (outside the colors of the indicated spectrum), it means that this neighbourhood has no airbnb with that option.</p>'
+explain_the_maps = '<p style="text-align: center; font-size: 18px;">The maps below show the average prices per neighbourhood for the different room type options, with whole house on the left and private room on the right. If a neighbourhood is shown in dark grey (outside the colours of the spectrum shown), it means that there are no Airbnbs with that option in that neighbourhood.</p>'
 st.write(explain_the_maps, unsafe_allow_html=True)
 
 

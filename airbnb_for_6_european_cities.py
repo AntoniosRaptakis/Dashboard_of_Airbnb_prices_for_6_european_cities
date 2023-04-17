@@ -123,7 +123,7 @@ st.set_page_config(layout="wide")
 st.write("## This Web App shows data related to the prices of airbnb listings in 6 european cities")
 st.write("###### Created by Antonios Raptakis")
 
-st.write("The csv files were taken from kaggle and the geojson files from Inside Airbnb. The room type indicates the type of hosting with 2 options available, Entire Home vs Private Room.")
+st.write("The csv files were taken from kaggle and the geojson files from Inside Airbnb. The room type indicates the type of hosting with 2 options available, Entire home vs Private room.")
 
 cities = data.City.unique()
 st.markdown("##### Use the drop down below to select a city and see the results.")

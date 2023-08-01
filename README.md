@@ -19,3 +19,5 @@ The libraries that I used for the WebApp:
 In order to run the WebApp in the streamlit cloud, I had to use the file requirements.txt with the name of some libraries that I use in the python script.
 
 The directories with the european cities include the geojson files and the Jupyter_Notebook directory includes two notebooks, one creates the airbnb_prices_in_6_european_cities.csv while the other the mean_values_per_neighbourhoods.csv and the new geojson files.
+
+Link to WebApp: https://antoniosraptakis-dashboard--airbnb-for-6-european-cities-xcetuq.streamlit.app
